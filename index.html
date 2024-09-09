@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>
-        </title>
+        <title></title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #FFCCFF;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                text-align: center;
+            }
+            #c {
+                max-width: 100%;
+                height: auto;
+            }
+            #blink {
+                font-size: 2vw; /* 使用视口宽度的百分比 */
+                color: #fff; /* 设置文字颜色 */
+            }
+            @media (max-width: 600px) {
+                #blink {
+                    font-size: 10px; /* 在小屏幕上设置最小字体大小 */
+                }
+            }
+        </style>
     </head>
     
     <body>
-        <p style="text-align: center;">
-            <canvas id="c" height="500" width="500">
-            </canvas>
-            <div id="blink">
-                祝左老师教师节快乐嘿嘿！
-            </div>
-            <style>
-                body{background-color:#FFCCFF}
-                #blink{ width:100%; font-size:30px; text-align:center}
-            </style>
+        <canvas id="c" height="500" width="500"></canvas>
+        <div id="blink">
+
+            祝左老师教师节快乐嘿嘿！
+        </div>
             <script>
                 // 动态玫瑰
                 var b = document.body;
